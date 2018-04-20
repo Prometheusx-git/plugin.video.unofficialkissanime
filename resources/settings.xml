@@ -1,0 +1,19 @@
+<settings>
+    <category label="General">
+        <setting id="preset-quality" label="Preset Quality" type="labelenum" values="Individually select|1080p|720p|480p|360p" default="Individually select"/>
+        <setting id="enable-metadata" label="Enable downloading metadata, including fanart" type="bool" default="true"/>
+        <setting id="http-type" label="Select HTTP type" type="labelenum" values="http|https" default="http"/>
+    </category>
+    <category label="Account">
+        <setting id="username" label="Account" type="action" option="close" action="RunPlugin(plugin://plugin.video.unofficialkissanime/?action=account)"/>
+	<setting id="password" label="Password" type="text"	default=""  option="hidden"/>
+        <setting id="tmdb-api-key" label="TMDB API key" type="text"/>
+    </category>
+    <category label="Debug">
+        <setting id="debug-import" label="Enable to import everything at once (affects performance)" type="bool" default="false"/>
+        <setting id="debug-timestamp" label="Enable to turn on timestampping for benchmarking functions" type="bool" default="false"/>
+        <setting id="debug-metadata-threads" label="Enable to get metadata in serial (affects performance)" type="bool" default="false"/>
+        <setting id="debug-dump-html" label="Enable to dump HTML on load failure" type="bool" default="false"/>
+        <setting id="debug-decryption-key" label="Enter the SHA256 hash of the key to decrypt video links" type="text" default=""/>
+    </category>
+</settings>

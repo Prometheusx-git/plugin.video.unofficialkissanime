@@ -1,0 +1,80 @@
+v1.2.4 (2017-03-28)
+ - Internal code reorganization
+
+v1.2.3 (2017-03-28)
+ - Updated to use the dat1guy.shared and animemetahandler modules
+
+v1.2.2.4 (2017-03-24)
+- Fixed "bug" where urls with unicode characters would cause a crash
+
+v1.2.2.3 (2017-03-22)
+- Fixed bug where autoplayer would crash if the preset quality was below the lowest quality
+
+v1.2.2.2 (2017-03-21)
+ - Fixed bug where context menu items are not added correctly to movies, causing a crash
+ 
+v1.2.2.1 (2017-03-21)
+ - Fixed BeautifulSoup bad tag error in v16
+
+v1.2.2 (2017-03-21)
+ - Added context menu option to show queue when viewing a series or a movie
+ - Fixed openload error when preset quality is set to a quality value
+ - Miscellaneous code clean up
+
+v1.2.1 (2017-03-20)
+- Added context menu option to queue episodes and movies
+
+v1.2.0 (2017-03-20)
+ - Fixed benign Beautiful Soup "html.parser" error
+ - The decryption key is now dynamically generated, based on hard-coded information
+ - Added default video option if unable to decrypt the video links from the quality options
+ - Updated addon.xml for Krypton
+ - Updated license snippets to conform to multi-file program standards
+ - The content type is now properly set
+ - Added screenshots
+ - Updated README with ToC and reference to TMDB API keys
+
+v1.1.0 (2017-01-18)
+ - Implemented Openload support if KissAnime servers are not available
+
+v1.0.26 (2017-03-17)
+ - Added an option in the settings to input the video link decryption key
+
+v1.0.25 (2017-03-17)
+ - Updated decryption key because of website changes
+
+v1.0.24 (2017-03-16)
+ - Fixed initial start-up bug where the profile path was not created by the last visited function
+ - Added settings to main menu
+ - Fixed last visited item when the debug import option was enabled
+ - Fixed sorting error on initial download of tv episode metadata
+ - Fixed metadata cache lookup error that occurred when searching only by premiere date, resulting in multiple matches
+
+v1.0.23 (2017-03-15)
+ - Fixed bug where autoplay did not decrypt the link
+
+v1.0.22 (2017-03-15)
+ - Updated README to include installation instructions
+
+v1.0.21 (2017-03-15)
+ - Fixed id for HD quality list
+ - Updated video player to decrypt URL before attempting to resolve
+ - Added pyaes (https://github.com/ricmoo/pyaes) for this decryption
+
+v1.0.2 (2017-01-02)
+ - Changed domain to kissanime.ru and updated username and password parameter names for logging in
+ - Fixed cookie bug, (Python issue #5537) in Fire OS 5.3.2.1, which prevented logging in and out for bookmark access
+ - Added debug support for dumping HTML when page fails to load
+
+v1.0.1 (2016-09-08)
+ - Added a real icon and added fanart
+ - Forgot to update version in addon.xml
+ - Added support for adding TMDB API key in the settings
+
+v1.0.0 (2016-09-01)
+ - Initial version
+ - Browse through KissAnime's content
+ - Search for KissAnime's content
+ - Metadata support
+ - Log in and out of your KissAnime account to enjoy bookmarks with support for primitive management
+ - Quick access to the last show visited, with widget support
