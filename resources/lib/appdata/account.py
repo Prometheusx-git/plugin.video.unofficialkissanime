@@ -74,7 +74,7 @@ class Account(object):
         return (username_and_password == 2)
 
     def is_in_bookmark_list(self, id=args.value):
-        url = helper.domain_url() + 'CheckBookmarkStatus'
+        url = helper.domain_url() + '/CheckBookmarkStatus'
         html, e = self.net.get_html(url, self.cookies, helper.domain_url(), {'animeId':id})
         helper.handle_html_errors(html, e)
         if html == '':
@@ -120,7 +120,8 @@ class Account(object):
         helper.start('Account._perform_bookmark_operation: %s' % ('add' if add else 'remove'))
         helper.show_busy_notification()
         bookmark_id = args.value
-        url = '%sBookmark/%s/%s' % (helper.domain_url(), bookmark_id, 'add' if add else 'remove')
+        url = '%s/Bookmark/%s/%s' % (helper.domain_url(), bookmark_id, 'add' if add else 'remove')
+        #helper.show_error_dialog(['',str(url)])			
         html, e = self.net.get_html(url, self.cookies, helper.domain_url(), {'no-op':0})
         html = helper.handle_html_errors(html, e)
         helper.close_busy_notification()
