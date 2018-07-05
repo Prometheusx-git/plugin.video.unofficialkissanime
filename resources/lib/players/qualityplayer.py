@@ -58,7 +58,7 @@ class QualityPlayer(WebPage, VideoPlayer):
         quali_choser = helper.present_selection_dialog('Choose the quality from the options below', quali) 
         if ( quali_choser != -1):		
             params_url,e = self.net.get_html('%s&q=%s' % (target, quali[quali_choser]), self.cookies, helper.domain_url())				
-            target = re.search('<source\ssrc=\"([^\"]+)\"\s.+title=\"([^\"]+)\"\s.+?>', params_url).group(1)
+            target = re.search('<source\ssrc=\"([^\"]+)\"\s.+title=\"([^\"]+)\"\s.+?>', params_url).group(1) #',\ssrc: \"([^\"]+?)\"' 
             #helper.show_error_dialog(['',str(target)])					
             helper.resolve_url(target)
         target = ''		
