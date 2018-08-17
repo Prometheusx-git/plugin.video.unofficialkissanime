@@ -51,7 +51,7 @@ class QualityPlayer(WebPage, VideoPlayer):
         #helper.show_error_dialog(['',str(self.html)])			
         #self.link = self.html.split('|||')[0]
         target = self.html.split('|||')[0]
-         
+        target = target.replace('www.rapidvideo.com/e/','www.rapidvideo.com/?v=')         
         params_url,e = self.net.get_html( '%s&q=360p' % target, self.cookies, helper.domain_url())
         quali = re.findall(r'&q=(.*?)"',params_url)
         quali = quali[::-1]				
