@@ -104,14 +104,14 @@ class EpisodeList(WebList):
         # of lack of data.  We can fix any potential mismatches here.
         if 'Movie' in self.genres:
             helper.log_debug('|COUNT|MISMATCH| %s' % args.full_title)
-            return 'movie'
+            return 'tvshow'#'movie'
 
         # 1.2) We have a special, let's handle just use the season 0 data along with the show banner
         if 'OVA' in self.genres or ('(OVA)' in args.full_title or ' Specials' in args.full_title or
             re.search('( OVA)( \(((Sub)|(Dub))\))?$', args.full_title) != None or
             re.search(' (Special)$', args.full_title) != None):
             helper.log_debug('|COUNT|OVA| %s' % args.full_title)
-            return 'special'
+            return 'tvshow'#'special'
 
         return 'tvshow'
 
